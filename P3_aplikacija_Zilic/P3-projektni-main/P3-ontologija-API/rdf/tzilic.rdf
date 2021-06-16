@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://oziz.ffos.hr/tzilic/marvel-glumci#"
+     xml:base="http://oziz.ffos.hr/tzilic/marvel-glumci"
+     xmlns:ns0="http://oziz.ffos.hr/tzilic/marvel-glumci#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dc11="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci">
+        <dc11:creator>Tomislava Žilić</dc11:creator>
+        <rdfs:comment>Za potrebe informiranja i upoznavanja fanova s glumcima.</rdfs:comment>
+        <rdfs:label>Ontologija glumaca Marvel filmova.</rdfs:label>
+    </owl:Ontology>
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    </owl:AnnotationProperty>
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#glumac -->
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#glumac">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#heroj -->
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#heroj">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#nagrada -->
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#nagrada">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#godina -->
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#godina">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#drzava -->
+
+    <owl:ObjectProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#drzava">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <rdfs:range rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#DrzavaRodenja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#godinaRodenja -->
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#godinaRodenja"/>
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#ime"/>
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#roden">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    </owl:DatatypeProperty>
+
+    
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#ime-prezime">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#nagrada">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#heroj">
+        <rdfs:domain rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#DrzavaRodenja -->
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#DrzavaRodenja"/>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Film -->
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac -->
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Heroj -->
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Heroj">
+        <owl:disjointWith rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+    </owl:Class>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada -->
+
+    <owl:Class rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Australia -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Australia">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#DrzavaRodenja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#BlackWidow -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#BlackWidow">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Heroj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Boston -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Boston"/>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#CaptainAmerica -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#CaptainAmerica">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Heroj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Chris_Evans -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Chris_Evans">
+
+    <ime-prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Evans</ime-prezime>
+        <ns0:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Evans</ns0:ime>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <jeRodenU rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#USA"/>
+        <roden rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</roden>
+        <godinaRodenja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1981</godinaRodenja>
+        <heroj rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain America</heroj>
+        <nagrada rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People's_Choice_Awards</nagrada>
+        <jeDobio rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#People&apos;s_Choice_Awards"/>
+        
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Chris_Hemsworth -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Chris_Hemsworth">
+
+    <ime-prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Hemsworth</ime-prezime>
+        <ns0:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Hemsworth</ns0:ime>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <jeRodenU rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Australia"/>
+        <roden rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</roden>
+        <godinaRodenja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1983</godinaRodenja>
+        <heroj rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thor</heroj>
+        <nagrada rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People's_Choice_Awards</nagrada>
+        <jeDobio rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#People&apos;s_Choice_Awards"/>
+
+    </owl:NamedIndividual>
+    
+
+     <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Scarlett_Johansson -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Scarlett_Johansson">
+
+    <ime-prezime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scarlett Johansson</ime-prezime>
+        <ns0:ime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scarlett_Johansson</ns0:ime>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Glumac"/>
+        <jeRodenU rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#USA"/>
+        <roden rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</roden>
+        <godinaRodenja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1984</godinaRodenja>
+        <heroj rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Widow</heroj>
+        <nagrada rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV</nagrada>
+        <jeDobio rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Oscar"/>
+
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Oscar -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Oscar">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Scarlett_Johansson -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Scarlett_Johansson">
+        <jeDobio rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#People&apos;s_Choice_Awards"/>
+        <jeRodenU rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#New_York"/>
+        <jeRodenU rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#USA"/>
+        <godinaRodenja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1984</godinaRodenja>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#Thor -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#Thor">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Film"/>
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Heroj"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#USA -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#USA">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#DrzavaRodenja"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://oziz.ffos.hr/tzilic/marvel-glumci#People&apos;s_Choice_Awards -->
+
+    <owl:NamedIndividual rdf:about="http://oziz.ffos.hr/tzilic/marvel-glumci#People&apos;s_Choice_Awards">
+        <rdf:type rdf:resource="http://oziz.ffos.hr/tzilic/marvel-glumci#Nagrada"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People&apos;s Choice Awards</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
